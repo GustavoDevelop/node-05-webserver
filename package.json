@@ -1,0 +1,24 @@
+{
+  "name": "Node-05-webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoDevelop/node-05-webserver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoDevelop/node-05-webserver/issues"
+  },
+  "homepage": "https://github.com/GustavoDevelop/node-05-webserver#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
