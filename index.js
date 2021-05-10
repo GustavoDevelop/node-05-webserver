@@ -1,24 +1,22 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
 
-http.createServer((req, res) =>{
-
-    console.log(req);
-
-    
-    //res.writeHead(200, {'Content-type': 'application/json'});
-    /*const user = {
-        id: 123,
-        name: 'Fernando'
-    }
-    res.write(JSON.stringify(user));
-    */
-    res.setHeader('Content-Disposition', 'attachment; filename=usuarios.csv');
-    res.writeHead(200, {'Content-type': 'application/csv'});
-    res.write('id,name\n123,Fernando\n456,Marta');
-
-    res.end();
-}).listen(3000);
+app.use(express.static(__dirname + '/public'))
 
 
 
+
+
+app.get('/', function (req, res) {
+    res.send('Hello World!')
+  })
+  app.get('/usuarios', function (req, res) {
+    res.send('User: Lauti')
+  })
+
+  app.post('/', function (req, res) {
+    res.send('POST del path/')
+  })
+
+  app.listen(4000);
